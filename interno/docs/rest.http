@@ -1,7 +1,0 @@
-POST  http://localhost:8080/novoaluno
-
-{
-    "name":"", 
-	"cpf": "2434354664",  
-	"rg": "324546578899", 
-}
