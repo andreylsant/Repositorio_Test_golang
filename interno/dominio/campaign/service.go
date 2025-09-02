@@ -1,7 +1,6 @@
 package campaign
 
 import (
-	"errors"
 
 	"github.com/andreylsant/test/interno/contracts"
 )
@@ -10,16 +9,16 @@ type Service struct {
 	Repository Repository
 }
 
-func (s *Service) Create(newCampaign *contracts.Campaign) (string, error) { 	
-	camapaign, err := NewCampaign(newCampaign.Name, newCampaign.RG, newCampaign.CPF)
+func (s *Service) Create(aluno *contracts.Aluno) (string, error) {
+	newAluno, err := NewAluno(aluno.Name, aluno.CPF, aluno.RG)
 	if err != nil {
-		return "", errors.New(err.Error())
+		return "", err
 	}
 
-	err = s.Repository.Save(camapaign)
+	err = s.Repository.Save(newAluno)
 	if err != nil {
-		return "", errors.New(err.Error())
+		return "", err
 	}
 
-	return camapaign.Id, nil
+	return newAluno.ID, nil
 }

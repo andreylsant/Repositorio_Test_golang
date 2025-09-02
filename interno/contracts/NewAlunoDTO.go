@@ -1,7 +1,7 @@
 package contracts
 
-type Campaign struct{
+type Aluno struct{
 	Name string
-	RG string
 	CPF string
+	RG string
 }

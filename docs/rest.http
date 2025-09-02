@@ -2,6 +2,10 @@ POST http://localhost:8080/aluno
 
 {
     "name": "name1",
-    "rg": "1232413432",
     "cpf": "321234344",
+    "rg": "1232413432"
 }
+
+###
+
+GET http://localhost:8080/aluno/"gui"'

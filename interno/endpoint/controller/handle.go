@@ -1,4 +1,4 @@
-package hendle
+package controller
 
 import "github.com/andreylsant/test/interno/dominio/campaign"
 
