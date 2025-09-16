@@ -9,3 +9,6 @@ POST http://localhost:8080/aluno
 ###
 
 GET http://localhost:8080/aluno/"gui"'
+###
+
+GET http://localhost:8080/

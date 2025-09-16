@@ -13,9 +13,10 @@ func Handlefunc() {
 		Repository: &database.ListenDeAluno{},
 	}
 	handle := controller.Handle{
-		Service: service,
+		HandleService: service,
 	}
 	r.GET("/:id", controller.Saudacao)
+	r.GET("/", handle.CampaignGet)
 	r.POST("/aluno", handle.CriarAluno)
 	r.Run()
 }

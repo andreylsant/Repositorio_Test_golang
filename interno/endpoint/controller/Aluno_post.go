@@ -16,7 +16,7 @@ func (h *Handle) CriarAluno(c *gin.Context) {
 		return
 	}
 
-	id, err := h.Service.Create(&aluno)
+	id, err := h.HandleService.Create(&aluno)
 	if err != nil{
 		c.JSON(http.StatusInternalServerError, gin.H{
 			"Error" : "bad request", 

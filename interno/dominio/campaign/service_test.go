@@ -18,6 +18,10 @@ func (r *repositoryMock) Save(aluno *Aluno)error{
 	return args.Error(0)
 }
 
+func (r *repositoryMock) Get() ([]Aluno, error){
+	return nil, nil
+}
+
 var (
 	newaluno = contracts.Aluno{
 		Name: "nametest",
